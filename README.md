@@ -5,27 +5,23 @@ Uma API RESTful desenvolvida em Java com Spring Boot para gerenciar uma lista de
 ## Diagrama de Classes (Domínio da API)
 ```mermaid
 classDiagram
-    class Task {
-        +Long id
-        +String title
-        +String description
-        +String status
-        +User assignedTo
-        +Category category
-    }
-    
-    class User {
-        +Long id
-        +String name
-        +Integer age
-    }
-    
-    class Category {
-        +Long id
-        +String name
-    }
-    
-    Task "1" -- "0..1" User
-    Task "1" -- "0..1" Category
+  class User {
+    -Long id
+    -String name
+    -int age
+    -Task[] tasks
+  }
+
+  class Task {
+    -Long id
+    -String title
+    -String description
+    -LocalDate date
+    -LocalDate deadline
+    -User user
+  }
+
+  User "1" *-- "N" Task
+  Task "N" *-- "1" User
 
 ```
