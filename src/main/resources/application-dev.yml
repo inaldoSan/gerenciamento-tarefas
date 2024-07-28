@@ -1,4 +1,7 @@
 spring:
+  config:
+    activate:
+      on-profile: dev
   datasource:
     url: jdbc:h2:mem:inaldo
     username: inaldo
