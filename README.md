@@ -16,8 +16,6 @@ classDiagram
     -Long id
     -String title
     -String description
-    -LocalDate date
-    -LocalDate deadline
     -User user
   }
 
@@ -25,3 +23,7 @@ classDiagram
   Task "N" *-- "1" User
 
 ```
+
+## LINK API
+
+[https://gerenciamento.up.railway.app/swagger-ui/index.html](https://gerenciamento.up.railway.app/swagger-ui/index.html)
